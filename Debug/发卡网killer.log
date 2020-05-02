@@ -1,0 +1,8 @@
+﻿  main.cpp
+C:\Box\Programs\C++\发卡网Killer\faka-datebase-killer\curl.h(88,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 参见“strcpy”的声明
+C:\Box\Programs\C++\发卡网Killer\faka-datebase-killer\curl.h(107,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 参见“strcpy”的声明
+C:\Box\Programs\C++\发卡网Killer\faka-datebase-killer\curl.h(126,1): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 参见“strcpy”的声明
+  发卡网killer.vcxproj -> C:\Box\Programs\C++\发卡网Killer\faka-datebase-killer\Debug\发卡网killer.exe
