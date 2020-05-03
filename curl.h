@@ -9,54 +9,7 @@ void curl_post(string url, int regnum);
 void curl_get_read();
 void curl_get(string url, int regnum);
 
-void curl_auto_mode(string url, int regnum,string mode)
-{
-	if (mode == "post") mode = "POST";
-	else if (mode == "put") mode = "PUT";
-	else if (mode == "get") mode = "GET";
 
-	cmd_utf_8;
-	system("cls");
-	system("title Curl");
-
-	for (int i = 1; i <= regnum; i++)
-	{
-		string curl_cmd = "curl -v -X "+ mode+" -d \"email=" + GetRandomStr(8) + "@" + GetRandomStr(7) + ".com" + "&password=";
-		string password = GetRandomStr(16);
-		curl_cmd = curl_cmd + password + "&password_confirmation=" + password + "&checkTos=true\" " + url + "\"";
-		char cmd[800];
-		strcpy(cmd, curl_cmd.c_str());
-		system(cmd);
-		printf("\nRegistered Account:%d\n", i);
-	}
-	system("pause");
-}
-
-
-string url;
-int regnum;
-string mode;
-
-void curl_auto_read()
-{
-	cout << "请输入目标url （例如:http://www.kamiwu.cn/api/merchant/auth/register):";
-	cin >> url;
-	cout << "\n请输入注册数量:";
-	cin >> regnum;
-	cout << "请输入请求模式(POST,GET,PUT)";
-mode_read:
-	cin >> mode;
-	if (mode != "PUT" && mode != "POST" && mode != "GET" && mode != "get" && mode != "post" && mode != "put")
-	{
-		cout << "\n输入错误，请重新输入:";
-		goto mode_read;
-	}
-	curl_auto_mode(url, regnum,mode);
-}
-
-
-
-//下面均为废弃函数。
 void curl_choose()
 {
 	char choose;
@@ -68,7 +21,7 @@ read:
 		printf("读取错误，请重新输入\n");
 		goto read;
 	}
-	switch (int(choose) - int('0'))
+	switch(int(choose) - int('0'))
 	{
 	case 1:curl_put_read(); break;
 	case 2:curl_post_read(); break;
@@ -78,7 +31,7 @@ read:
 		goto read;
 	}
 	}
-	return;
+	return ;
 }
 
 string curl_put_url;
@@ -126,11 +79,11 @@ void curl_put(string url, int regnum)
 	system("cls");
 	system("title Curl Put");
 
-	for (int i = 1; i <= regnum; i++)
+	for (int i = 1; i<=regnum; i++)
 	{
 		string curl_cmd = "curl -v -X PUT -d \"email=" + GetRandomStr(8) + "@" + GetRandomStr(7) + ".com" + "&password=";
 		string password = GetRandomStr(16);
-		curl_cmd = curl_cmd + password + "&password_confirmation=" + password + "&checkTos=true\" " + url + "\"";
+		curl_cmd = curl_cmd + password + "&password_confirmation=" + password + "&checkTos=true\" "+url+"\"";
 		char cmd[800];
 		strcpy(cmd, curl_cmd.c_str());
 		system(cmd);
@@ -143,7 +96,7 @@ void curl_post(string url, int regnum)
 {
 	cmd_utf_8;
 	system("cls");
-	system("title Curl Post");
+	system("title Curl Put");
 
 	for (int i = 1; i <= regnum; i++)
 	{
@@ -162,7 +115,7 @@ void curl_get(string url, int regnum)
 {
 	cmd_utf_8;
 	system("cls");
-	system("title Curl Post");
+	system("title Curl Put");
 
 	for (int i = 1; i <= regnum; i++)
 	{

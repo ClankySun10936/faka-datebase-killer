@@ -5,12 +5,15 @@
 #define cmd_utf_8 system("chcp 65001")
 
 using namespace std;
+ 
 
 #ifndef _WIN32
 cout << "请使用windows平台运行此程序!" << endl;
 system("pause");
 return false;
 #endif
+
+
 
 char choose_id;
 
@@ -31,13 +34,14 @@ main_read:
 	}
 
 	switch (int(choose_id) - int('0')) {
-	case 1:curl_auto_read(); break;
+	case 1:curl_choose(); break;
 	case 2:py_put(); break;
 		default: {
 		cout << "方法未找到,请重新输入:\n";
 		goto main_read;
 		}
 	}	
+
 
 	return false;
 }

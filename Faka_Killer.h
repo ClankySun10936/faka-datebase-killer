@@ -21,7 +21,7 @@ string UTF8ToGBK(string& strUtf8)  //disabled
 	len = WideCharToMultiByte(CP_ACP, 0, wszGBK, -1, NULL, 0, NULL, NULL);
 	char* pszGBK = new char[len + 1];
 	memset(pszGBK, 0, len + 1);
-	WideCharToMultiByte(CP_ACP, 0, wszGBK, -1, pszGBK, len, NULL,	 NULL);
+	WideCharToMultiByte(CP_ACP, 0, wszGBK, -1, pszGBK, len, NULL, NULL);
 	strOutGBK = pszGBK;
 	delete[]pszGBK;
 	delete[]wszGBK;
